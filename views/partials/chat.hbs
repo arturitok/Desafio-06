@@ -1,0 +1,32 @@
+<div>
+	<h1>Chat</h1>
+	<form id="messages">
+
+		<label for="email">Email</label>
+		<input type="text" id="email">
+		<label for="message"></label>
+		<input type="text" id="message">
+		<button type="submit">Submit</button>
+	</form>
+	<div id="errors">
+
+	</div>
+	<hr>
+	<div >
+		<ul id="chat">
+		{{#if messages}}
+		
+			{{#each messages}}
+				<li>
+					<span style="color: blue; font-weight: 600;">{{this.email}}: </span>
+					<span style="color: brown;">[{{this.date}}]</span>
+					<span style="color: green; font-style: italic;">{{this.message}}</span>
+				</li>
+			{{/each}}
+		{{else}}
+			<span>No hay mensajes</span>
+		{{/if}}
+		</ul>
+
+	</div>
+</div>
