@@ -25,6 +25,7 @@ form.addEventListener('submit', e => {
 	}
 });
 */
+
 socket.on('update-products', product => {
 	const template = handlebars.compile(
 		"<td>{{title}}</td><td>{{price}}</td><td><img src={{thumbnail}} style='width:50px;'></img></td>"
